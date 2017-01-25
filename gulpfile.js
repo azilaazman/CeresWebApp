@@ -83,7 +83,11 @@ const browserify = require('browserify'),
   gulp.task('server', ['js'], function() {
   return gulp.src('./')
   .pipe(livereload({
+<<<<<<< HEAD
     host: 'localhost',
+=======
+    host: '0.0.0.0',
+>>>>>>> 781eb02bee0c66c0bab44ddca90dd48524d94c42
     port: 8080,
     open: true,
     defaultFile: './Views/Home/index.html',

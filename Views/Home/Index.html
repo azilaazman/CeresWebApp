@@ -43,7 +43,11 @@
     <!-- <script src="../wwwroot/js/components/dashboard/TempDetails.js"></script> -->
 
     <script type="text/javascript">
+<<<<<<< HEAD
       // $(function () {
+=======
+      $(function () {
+>>>>>>> 781eb02bee0c66c0bab44ddca90dd48524d94c42
 
       //  //Create the Hub
       //  console.log("Ready!");
@@ -55,12 +59,30 @@
 
       // $.connection.hub.logging = true;
     
+<<<<<<< HEAD
     //  });
 
     </script>
     <script src="../Scripts/ChartScript.js"></script>
     <!-- <script type="text/javascript" src="../wwwroot/bower_components/introjs/intro.js"></script> -->
 
+=======
+     });
+
+    </script>
+    <script src="../Scripts/ChartScript.js"></script>
+    <script type="text/javascript" src="../wwwroot/bower_components/introjs/intro.js"></script>
+    <script>
+        function startTour() {
+            var tour = introJs()
+            tour.setOption('tooltipPosition', 'auto');
+            tour.setOption('positionPrecedence', ['left', 'right', 'bottom', 'top']);
+            tour.setOption('exitOnOverlayClick: false')
+            tour.start()
+        }
+        
+    </script>
+>>>>>>> 781eb02bee0c66c0bab44ddca90dd48524d94c42
 <!-- Custom Theme JavaScript -->
 <!--FOR HTML UNCOMMENT -->
 </body>

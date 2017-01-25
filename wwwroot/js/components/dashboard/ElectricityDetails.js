@@ -93,7 +93,16 @@ const ElectricityDetails = React.createClass({
       for(var i = 0; i < stats.length; i++) {
           total += stats[i];
       }
+<<<<<<< HEAD
       statsAvg = total / stats.length;
+=======
+      var rawAvg = total / stats.length;
+
+      //round off the avg
+      statsAvg = Math.round(rawAvg * 10) / 10; 
+
+      
+>>>>>>> 781eb02bee0c66c0bab44ddca90dd48524d94c42
       };
         // console.log("start : " + $.connection.hub.start());
         $.connection.hub.start().done(function () {

@@ -1,4 +1,8 @@
 'use strict';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 781eb02bee0c66c0bab44ddca90dd48524d94c42
 import React, { PropTypes as T } from 'react';
 import { Router, Route, Link, IndexRoute, browserHistory, hashHistory, IndexRedirect } from 'react-router';
 import ReactDOM from 'react-dom';

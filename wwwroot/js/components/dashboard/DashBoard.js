@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var $ = require('jquery');
 import React, { PropTypes } from 'react';
 import { Link, IndexRoute, browserHistory, hashHistory, IndexRedirect } from 'react-router';
@@ -59,10 +60,38 @@ var DashBoard = React.createClass({
     //  })
      
      
+=======
+var React = require('react');
+var PropTypes = React.PropTypes;
+import { Link, IndexRoute, browserHistory, hashHistory, IndexRedirect } from 'react-router';
+var DashBoard = React.createClass({
+   loadPlantFromServer: function () {
+    // if received
+    // Uncaught SyntaxError: Unexpected token < in JSON at position 0
+    // at JSON.parse (<anonymous>)
+    // at ProxyComponent.eval (eval at compileModule (bundle.js:62), <anonymous>:41:23)  from bundle.js
+    // it is because of XMLHTTRequest
+        // var xhr = new XMLHttpRequest();
+        // xhr.open('get', this.props.url, true);
+        // xhr.onload = function () {
+        //     var data = JSON.parse(xhr.responseText);
+        //     var length = data.length;
+        //     //console.log(data[length - 1]);
+        //     var lastData = data[length - 1]; //the json data that we want
+        //     this.setState({ name: lastData['name'] });
+        //     var gc = lastData['growing_conditions'];
+        //     this.setState({ temp: gc['temp'] });
+        //     this.setState({ humid: gc['humid'] });
+        //     this.setState({ light: gc['light'] });
+        //     this.setState({ power: gc['power'] });
+        // }.bind(this);
+        // xhr.send();
+>>>>>>> 781eb02bee0c66c0bab44ddca90dd48524d94c42
     },
    getInitialState: function(){
         return {
             name: '-',
+<<<<<<< HEAD
             temp: '-°C',
             humid: '-%',
             water: '-',
@@ -74,6 +103,18 @@ var DashBoard = React.createClass({
    componentDidMount: function(){
      console.log("component did mount..");
        this.loadPlantFromServer();
+=======
+            temp: '-',
+            humid: '-',
+            water: '-',
+            care: '',
+            light: '-',
+            power: '-',
+        }
+    },
+   componentDidMount: function(){
+       //this.loadPlantFromServer();
+>>>>>>> 781eb02bee0c66c0bab44ddca90dd48524d94c42
    },
    render: function() {
         return (
@@ -85,6 +126,7 @@ var DashBoard = React.createClass({
                 {/* /.col-lg-12 */}
             </div>
               {/* /.row */}
+<<<<<<< HEAD
           <div className="row">
             <div className="row" data-step="2" data-intro="Find all your crucial data here!"> 
             
@@ -116,6 +158,101 @@ var DashBoard = React.createClass({
                 title="Light Intensity"
               />
                 
+=======
+        <div className="row">
+          <div className="row" data-step="2" data-intro="Find all your crucial data here!"> 
+          <div className="col-lg-3 col-md-6">
+            <div className="panel panel-primary">
+              <div className="panel-heading">
+                <div className="row">
+                  <div className="col-xs-3">
+                    <i className="fa fa-thermometer-empty fa-5x" />
+                  </div>
+                  <div className="col-xs-9 text-right">
+                    <div className="huge">{this.state.temp}°C</div>
+                    <div>Temperature</div>
+                  </div>
+                </div>
+              </div>
+              <Link to="/plants/tempDetails">
+                <div className="panel-footer">
+                  <span className="pull-left">View Details</span>
+                  <span className="pull-right"><i className="fa fa-arrow-circle-right" /></span>
+                  <div className="clearfix" />
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-6">
+            <div className="panel panel-green">
+              <div id="humidityDtls" className="panel-heading">
+                <div className="row">
+                  <div className="col-xs-3">
+                    <i className="fa fa-tint fa-5x" />
+                  </div>
+                  <div className="col-xs-9 text-right">
+                    <div className="huge">{this.state.humid}%</div>
+                    <div>Humidity</div>
+                  </div>
+                </div>
+              </div>
+                <Link to="/plants/humidityDetails">
+                <div className="panel-footer">
+                  <span className="pull-left">View Details</span>
+                  <span className="pull-right"><i className="fa fa-arrow-circle-right" /></span>
+                  <div className="clearfix" />
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-6">
+            <div className="panel panel-yellow">
+              <div className="panel-heading">
+                <div className="row">
+                  <div className="col-xs-3">
+                    <i className="fa fa-bolt fa-5x" />
+                  </div>
+                  <div className="col-xs-9 text-right">
+                    <div className="huge">{this.state.power}W</div>
+                    <div>Electricity</div>
+                  </div>
+                </div>
+              </div>
+                <Link to="/plants/electricityDetails">
+                <div className="panel-footer">
+                  <span className="pull-left">View Details</span>
+                  <span className="pull-right"><i className="fa fa-arrow-circle-right" /></span>
+                  <div className="clearfix" />
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-6">
+            <div className="panel panel-red">
+              <div className="panel-heading">
+                <div className="row">
+                  <div className="col-xs-3">
+                    <i className="fa fa-sun-o fa-5x" />
+                  </div>
+                  <div className="col-xs-9 text-right">
+                    <div className="huge">{this.state.light}lm</div>
+                    <div>Light Intensity</div>
+                  </div>
+                </div>
+              </div>
+                <Link to="/plants/lightDetails">
+                <div className="panel-footer">
+                  <span className="pull-left">View Details</span>
+                  <span className="pull-right"><i className="fa fa-arrow-circle-right" /></span>
+                  <div className="clearfix" />
+                </div>
+              </Link>
+            </div>
+          </div>          
+>>>>>>> 781eb02bee0c66c0bab44ddca90dd48524d94c42
           </div>
 
           <div className="col-md-6">

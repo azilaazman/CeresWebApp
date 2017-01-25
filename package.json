@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "auth0-lock": "^10.2.2",
     "aws-iot-device-sdk": "^1.0.14",
     "bootstrap": "^3.3.5",
@@ -27,6 +28,21 @@
     "react-bootstrap": "^0.30.0-rc.1",
     "react-dom": "^15.4.2",
     "react-router": "^3.0.0"
+=======
+    "browserify": "^13.3.0",
+    "classnames": "^2.2.5",
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.1.1",
+    "livereactload": "^3.2.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.0",
+    "auth0-lock": "^10.2.2",
+    "bootstrap": "^3.3.5",
+    "classnames": "^2.2.5",
+    "jwt-decode": "^2.0.1",
+    "react-bootstrap": "^0.30.0-rc.1"
+>>>>>>> 781eb02bee0c66c0bab44ddca90dd48524d94c42
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
